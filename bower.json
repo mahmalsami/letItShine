@@ -1,0 +1,26 @@
+{
+  "name": "made",
+  "version": "0.0.1",
+  "authors": [
+    "DIGITAS France <frontend@digitas.fr>"
+  ],
+  "description": "Code igniter",
+  "main": "app/server.js",
+  "license": "MIT",
+  "homepage": "https://github.digitas.fr/html/made",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.0.3",
+    "bootstrap": "~3.0.0"
+  },
+  "devDependencies": {
+    "modernizr": "~2.6.2"
+  }
+}
