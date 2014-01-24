@@ -23,6 +23,8 @@ sudo npm i -g grunt-cli bower nodemon
 <h2 id="quick-start">Quick Start</h2>
 
 ```bash
+git clone https://github.digitas.fr/smahmal/Newsletter-Server.git
+
 npm install && bower install
 ```
 
