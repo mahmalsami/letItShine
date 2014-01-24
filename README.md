@@ -5,6 +5,7 @@
 02. <a href="#quick-start">Quick Start</a>
 03. <a href="#important">Important</a>
 04. <a href="#how-to">How To</a>
+05. <a href="#evolution">Future Possible Evolution</a>
 
 
 
@@ -29,7 +30,7 @@ npm install && bower install
 - Go to your app/views/HTMLnewsletter/
 - Edit your newsletter.html :
 - Replace nestlemail.bisystem.com/maggi/130327 by your Local IP+ express Port
-- for example : 192.168.1.:3000
+- for example : 192.168.1.1:3000
 
 
 ```bash
@@ -58,7 +59,7 @@ grunt start # grunts + runs the server
 	- images/*.html
 
 - Replace all you images link by the Ip corresponding to your machine + port your express is listenning on:
-'./images' by 'http://10.0.2.55:3000'
+	-'./images' by 'http://10.0.2.55:3000/images'
 
 - The build will:
 	- Copy your images on public/images so it will be accessible.
@@ -70,5 +71,20 @@ grunt start # grunts + runs the server
 
 - Launch on your machine serving express
 
+- Browse to http://localhost:3000/emailing/youremail@gmail.com
 
+- Connect your phone on Frontend
+
+- Open your mail, you should see your newsletter, will all your images
+
+
+<h2 id="evolution">Future Possible Evolution</h2>
+
+- Friendly user interface: 
+	- Ajax to send mail throught the Webservice
+	- Dynamic replace of images link
+
+- Push images on a remote http server
+
+- Feel free to contributes
 
