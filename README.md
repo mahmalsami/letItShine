@@ -26,18 +26,18 @@ npm install && bower install
 ```
 
 
-Go to your app/views/HTMLnewsletter/
-Edit your newsletter.html :
-Replace nestlemail.bisystem.com/maggi/130327 by your Local IP+ express Port
-for example : 192.168.1.:3000
+- Go to your app/views/HTMLnewsletter/
+- Edit your newsletter.html :
+- Replace nestlemail.bisystem.com/maggi/130327 by your Local IP+ express Port
+- for example : 192.168.1.:3000
 
 
 ```bash
 grunt start # grunts + runs the server
 ```
 
-Browse to http://localhost:3000/emailing/youremail@gmail.com
-The webservice will email you a newsletter if no error.
+- Browse to http://localhost:3000/emailing/youremail@gmail.com
+- The webservice will email you a newsletter if no error.
 
 
 
@@ -54,8 +54,8 @@ The webservice will email you a newsletter if no error.
 <h2 id="how-to">How To</h2>
 
 - Place your newsletter's HTML and images on 'app/views/HTMLnewsletter/'
----- newsletter.html
----- images/*.html
+	- newsletter.html
+	- images/*.html
 
 - Replace all you images link by the Ip corresponding to your machine + port your express is listenning on:
 './images' by 'http://10.0.2.55:3000'
