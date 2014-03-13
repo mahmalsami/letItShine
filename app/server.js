@@ -5,12 +5,15 @@
 var express = require('express');
 var path = require('path');
 var routes = require('./routes');
+
+var socket = require('./socket.js');
+
 var app = express();
 
 // Mail add-on module
-var mailServer = require('./mailServer');
-var readFile = require('./readFile');
-
+//var mailServer = require('./mailServer');
+//var api = require('./api.js');
+var api = require('./simuleLed.js');
 
 var port = process.env.PORT || 3000;
 
@@ -50,37 +53,26 @@ app.get('/styleguide.html', routes.styleguide);
 app.get('/home.html', routes.home);
 
 
+app.get('/led/start', api.startLed);
+app.get('/led/stop', api.stopLed);
 
 
-//Webservice
-app.get('/emailing/:userEmail', function(req,res) {
-	//mailServer.sendMail(req,res,'ahahahhahahahah');
-
-	function callback(htmlContent){
-		console.log(htmlContent);
-		mailServer.sendMail(req,res,htmlContent);
-	}
-
-	readFile.handle(callback);
-
-});
-
-
-//Webservice
-app.get('/readFile', function(req,res) {
-	/*
-	console.log(JSON.stringify(req.body));
-	console.log(JSON.stringify(req.params));
-	*/
-	readFile.handle(req,res);
-});
-
-
-
-
-
+//socket.activate();
 
 // Initialization
+/*
 app.listen(port, function () {
   console.log("Made app running on port " + port);
 });
+*/
+
+//new start server
+var http = require('http');
+app.set('port', port);
+var http_server=http.createServer(app).listen(app.get('port'), function(){
+	console.log('Express server listening on port ' + app.get('port'));
+});
+
+
+//Added for sockets!!!
+socket.activate(http_server);

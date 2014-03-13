@@ -59,6 +59,7 @@ module.exports = function(grunt) {
 
     jshint: {
       options: {
+        predef: ['io'],
         devel: false,
         curly: true,
         eqeqeq: true,

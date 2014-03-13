@@ -30,6 +30,7 @@
       </header>
       <div class="container">
         <div id="content">
+          <div id="ledState" class="label label-danger center">led</div>
           <div id="tpl">
             <style>
               #tpl a{text-decoration:none; background:#dedede; display:block; padding:20px; font-size:2em; color:#111; line-height:1; margin-bottom:20px}
@@ -50,6 +51,7 @@
     <!-- build:js javascripts/libs/vendor.min.js-->
     <script src="javascripts/libs/vendor.js"></script>
     <!-- endbuild-->
+    <script src="/socket.io/socket.io.js"></script>
     <!-- build:js javascripts/app.min.js-->
     <script src="javascripts/app.js"></script>
     <!-- endbuild-->
